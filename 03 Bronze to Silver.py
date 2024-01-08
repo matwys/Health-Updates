@@ -57,7 +57,7 @@ from delta.tables import *
 
 # COMMAND ----------
 
-# upsert into health_data table
+# update or insert into health_data table
 from pyspark.sql.functions import current_timestamp
 from delta.tables import *
 
@@ -102,4 +102,4 @@ deltaTable.alias('tgt') \
 
 # COMMAND ----------
 
-dbutils.notebook.exit("Silver Processing Complete")
+dbutils.notebook.exit("Bronze to Silver Processing Complete")
